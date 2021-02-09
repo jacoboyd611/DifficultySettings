@@ -30,9 +30,9 @@
         {
             this.nameInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.easyButton = new System.Windows.Forms.Button();
+            this.mediumButton = new System.Windows.Forms.Button();
+            this.hardButton = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
             this.outputLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -56,45 +56,56 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter Your Hero Name:";
             // 
-            // button1
+            // easyButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(172, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 58);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "EASY";
-            this.button1.UseVisualStyleBackColor = false;
+            this.easyButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.easyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.easyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.easyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easyButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.easyButton.Location = new System.Drawing.Point(172, 163);
+            this.easyButton.Name = "easyButton";
+            this.easyButton.Size = new System.Drawing.Size(122, 58);
+            this.easyButton.TabIndex = 2;
+            this.easyButton.Text = "EASY";
+            this.easyButton.UseVisualStyleBackColor = false;
+            this.easyButton.Click += new System.EventHandler(this.EasyButton_Click);
             // 
-            // button2
+            // mediumButton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(325, 163);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 58);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "MEDIUM";
-            this.button2.UseVisualStyleBackColor = false;
+            this.mediumButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mediumButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mediumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mediumButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediumButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mediumButton.Location = new System.Drawing.Point(325, 163);
+            this.mediumButton.Name = "mediumButton";
+            this.mediumButton.Size = new System.Drawing.Size(155, 58);
+            this.mediumButton.TabIndex = 3;
+            this.mediumButton.Text = "MEDIUM";
+            this.mediumButton.UseVisualStyleBackColor = false;
+            this.mediumButton.Click += new System.EventHandler(this.MediumButton_Click);
             // 
-            // button3
+            // hardButton
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(509, 163);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 58);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "HARD";
-            this.button3.UseVisualStyleBackColor = false;
+            this.hardButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.hardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.hardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hardButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.hardButton.Location = new System.Drawing.Point(509, 163);
+            this.hardButton.Name = "hardButton";
+            this.hardButton.Size = new System.Drawing.Size(122, 58);
+            this.hardButton.TabIndex = 4;
+            this.hardButton.Text = "HARD";
+            this.hardButton.UseVisualStyleBackColor = false;
+            this.hardButton.Click += new System.EventHandler(this.HardButton_Click);
             // 
             // startButton
             // 
             this.startButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.startButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.startButton.Location = new System.Drawing.Point(312, 258);
@@ -103,7 +114,7 @@
             this.startButton.TabIndex = 5;
             this.startButton.Text = "Begin";
             this.startButton.UseVisualStyleBackColor = false;
-            this.startButton.Click += new System.EventHandler(this.Button4_Click);
+            this.startButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // outputLabel
             // 
@@ -121,9 +132,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.startButton);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.hardButton);
+            this.Controls.Add(this.mediumButton);
+            this.Controls.Add(this.easyButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameInput);
             this.Name = "Form1";
@@ -137,9 +148,9 @@
 
         private System.Windows.Forms.TextBox nameInput;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button easyButton;
+        private System.Windows.Forms.Button mediumButton;
+        private System.Windows.Forms.Button hardButton;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Label outputLabel;
     }

@@ -12,17 +12,34 @@ namespace DifficultySettings
 {
     public partial class Form1 : Form
     {
-        string name;
-
+        string heroName;
+        string difficulty;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Button4_Click(object sender, EventArgs e)
+        private void EasyButton_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void MediumButton_Click(object sender, EventArgs e)
         {
 
         }
-    }
+
+        private void HardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+    } 
 }
